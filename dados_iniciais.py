@@ -1,0 +1,68 @@
+from lista_encadeada import ListaEncadeada
+from modelo import Registro
+
+_SEED = [
+    (1, "Disque 100 – Direitos Humanos", "Denúncia e Proteção",
+     "Canal nacional e gratuito para denunciar violações de direitos humanos, incluindo violência e discriminação contra pessoas LGBTQIA+.",
+     "Não exige documentos. Informe o que ocorreu, local, data e, se possível, dados do agressor.",
+     "Atendimento por telefone, 24h, em todo o Brasil.", "Telefone: 100"),
+    (2, "Registro de ocorrência por LGBTfobia", "Denúncia e Proteção",
+     "Desde 2019, o STF enquadra a homofobia e a transfobia na lei do racismo (Lei 7.716/89). A ocorrência pode ser registrada em qualquer delegacia.",
+     "Documento com foto (se houver) e relato do fato. Testemunhas, prints e vídeos ajudam.",
+     "Qualquer delegacia ou delegacia online do seu estado.", ""),
+    (3, "Retificação de nome e gênero em cartório", "Direitos e Documentação",
+     "Pessoas trans podem alterar prenome e gênero no registro civil direto no cartório, sem cirurgia, laudo ou decisão judicial (Provimento CNJ 73/2018).",
+     "Maioridade, documentos pessoais, certidões negativas e requerimento. Pergunte ao cartório a lista atualizada.",
+     "Cartório de Registro Civil onde a pessoa foi registrada ou onde mora.", ""),
+    (4, "Uso do nome social", "Direitos e Documentação",
+     "Direito de ser chamado pelo nome social em órgãos federais, escolas e serviços de saúde, independentemente da retificação.",
+     "Solicitar o registro do nome social no atendimento, matrícula ou cadastro do serviço.",
+     "Órgãos públicos federais, escolas, universidades e unidades de saúde.", ""),
+    (5, "Casamento e união estável homoafetivos", "Direitos e Documentação",
+     "Casais do mesmo sexo têm direito ao casamento civil e à união estável (Resolução CNJ 175/2013).",
+     "Documentos pessoais dos dois e certidão de nascimento; o cartório informa os demais.",
+     "Cartórios de Registro Civil de todo o país.", ""),
+    (6, "PrEP e PEP contra o HIV (SUS)", "Saúde",
+     "PrEP é a profilaxia antes da exposição e PEP, a profilaxia após exposição de risco (até 72h). Ambas são gratuitas no SUS.",
+     "Atendimento sem encaminhamento. A PEP deve ser iniciada o mais rápido possível.",
+     "Serviços de Atenção Especializada (SAE), CTA e UBS que dispensam o medicamento.", ""),
+    (7, "Processo Transexualizador no SUS", "Saúde",
+     "Acompanhamento multiprofissional e hormonioterapia para pessoas trans e travestis, com ambulatórios e serviços especializados.",
+     "Cartão SUS; o acesso costuma começar pela UBS ou por ambulatório especializado.",
+     "Ambulatórios trans e hospitais habilitados (consulte a Secretaria de Saúde).", ""),
+    (8, "Testagem gratuita de ISTs", "Saúde",
+     "Testes rápidos de HIV, sífilis e hepatites virais, com aconselhamento, de forma sigilosa e gratuita.",
+     "Não é preciso agendar nem apresentar encaminhamento na maioria das unidades.",
+     "UBS e Centros de Testagem e Aconselhamento (CTA).", ""),
+    (9, "CVV – Apoio emocional", "Saúde Mental",
+     "Apoio emocional e prevenção do suicídio, com conversa sigilosa e gratuita, por telefone, chat ou e-mail.",
+     "Nenhum requisito. Funciona 24h.",
+     "Atendimento remoto em todo o Brasil.", "Telefone: 188 | cvv.org.br"),
+    (10, "CAPS – Centro de Atenção Psicossocial", "Saúde Mental",
+     "Cuidado em saúde mental pelo SUS para sofrimento psíquico intenso, inclusive decorrente de violência e discriminação.",
+     "Cartão SUS. Pode-se procurar diretamente ou ser encaminhado pela UBS.",
+     "CAPS do seu município (consulte a UBS mais próxima).", ""),
+    (11, "Centros de Cidadania LGBTI", "Acolhimento e Assistência Social",
+     "Espaços de acolhimento com orientação jurídica, psicológica e social para pessoas LGBTQIA+ em vulnerabilidade ou vítimas de violência.",
+     "Atendimento voluntário. Leve documento com foto, se possível.",
+     "Disponibilidade varia por cidade; consulte a assistência social municipal.", ""),
+    (12, "CRAS – Assistência social", "Acolhimento e Assistência Social",
+     "Porta de entrada para programas sociais, como CadÚnico e benefícios, para quem está em vulnerabilidade, sem discriminação.",
+     "Documento com foto e comprovante de residência, se houver.",
+     "CRAS do seu bairro.", ""),
+    (13, "Combate ao bullying LGBTfóbico na escola", "Educação e Trabalho",
+     "Estudantes têm direito a ambiente escolar seguro e ao uso do nome social. Casos de discriminação devem ser denunciados.",
+     "Relate à direção ou à Secretaria de Educação; se não houver resposta, procure o Conselho Tutelar ou o Disque 100.",
+     "Escola, Secretaria de Educação ou Conselho Tutelar.", ""),
+    (14, "Discriminação no trabalho", "Educação e Trabalho",
+     "Discriminação por orientação sexual ou identidade de gênero no trabalho pode ser denunciada ao Ministério Público do Trabalho.",
+     "Reúna provas (mensagens, e-mails, testemunhas) e dados da empresa.",
+     "Ministério Público do Trabalho (denúncia online) ou sindicato.", ""),
+]
+
+
+def carregar_exemplos():
+    lista = ListaEncadeada()
+    for dados in _SEED:
+        lista.inserir_fim(Registro(*dados))
+    return lista

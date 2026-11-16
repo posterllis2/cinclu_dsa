@@ -1,0 +1,128 @@
+[
+  {
+    "id": 1,
+    "titulo": "Disque 100 – Direitos Humanos",
+    "categoria": "Denúncia e Proteção",
+    "descricao": "Canal nacional e gratuito para denunciar violações de direitos humanos, incluindo violência e discriminação contra pessoas LGBTQIA+.",
+    "requisitos": "Não exige documentos. Informe o que ocorreu, local, data e, se possível, dados do agressor.",
+    "local": "Atendimento por telefone, 24h, em todo o Brasil.",
+    "contato": "Telefone: 100"
+  },
+  {
+    "id": 2,
+    "titulo": "Registro de ocorrência por LGBTfobia",
+    "categoria": "Denúncia e Proteção",
+    "descricao": "Desde 2019, o STF enquadra a homofobia e a transfobia na lei do racismo (Lei 7.716/89). A ocorrência pode ser registrada em qualquer delegacia.",
+    "requisitos": "Documento com foto (se houver) e relato do fato. Testemunhas, prints e vídeos ajudam.",
+    "local": "Qualquer delegacia ou delegacia online do seu estado.",
+    "contato": ""
+  },
+  {
+    "id": 3,
+    "titulo": "Retificação de nome e gênero em cartório",
+    "categoria": "Direitos e Documentação",
+    "descricao": "Pessoas trans podem alterar prenome e gênero no registro civil direto no cartório, sem cirurgia, laudo ou decisão judicial (Provimento CNJ 73/2018).",
+    "requisitos": "Maioridade, documentos pessoais, certidões negativas e requerimento. Pergunte ao cartório a lista atualizada.",
+    "local": "Cartório de Registro Civil onde a pessoa foi registrada ou onde mora.",
+    "contato": ""
+  },
+  {
+    "id": 4,
+    "titulo": "Uso do nome social",
+    "categoria": "Direitos e Documentação",
+    "descricao": "Direito de ser chamado pelo nome social em órgãos federais, escolas e serviços de saúde, independentemente da retificação.",
+    "requisitos": "Solicitar o registro do nome social no atendimento, matrícula ou cadastro do serviço.",
+    "local": "Órgãos públicos federais, escolas, universidades e unidades de saúde.",
+    "contato": ""
+  },
+  {
+    "id": 5,
+    "titulo": "Casamento e união estável homoafetivos",
+    "categoria": "Direitos e Documentação",
+    "descricao": "Casais do mesmo sexo têm direito ao casamento civil e à união estável (Resolução CNJ 175/2013).",
+    "requisitos": "Documentos pessoais dos dois e certidão de nascimento; o cartório informa os demais.",
+    "local": "Cartórios de Registro Civil de todo o país.",
+    "contato": ""
+  },
+  {
+    "id": 6,
+    "titulo": "PrEP e PEP contra o HIV (SUS)",
+    "categoria": "Saúde",
+    "descricao": "PrEP é a profilaxia antes da exposição e PEP, a profilaxia após exposição de risco (até 72h). Ambas são gratuitas no SUS.",
+    "requisitos": "Atendimento sem encaminhamento. A PEP deve ser iniciada o mais rápido possível.",
+    "local": "Serviços de Atenção Especializada (SAE), CTA e UBS que dispensam o medicamento.",
+    "contato": ""
+  },
+  {
+    "id": 7,
+    "titulo": "Processo Transexualizador no SUS",
+    "categoria": "Saúde",
+    "descricao": "Acompanhamento multiprofissional e hormonioterapia para pessoas trans e travestis, com ambulatórios e serviços especializados.",
+    "requisitos": "Cartão SUS; o acesso costuma começar pela UBS ou por ambulatório especializado.",
+    "local": "Ambulatórios trans e hospitais habilitados (consulte a Secretaria de Saúde).",
+    "contato": ""
+  },
+  {
+    "id": 8,
+    "titulo": "Testagem gratuita de ISTs",
+    "categoria": "Saúde",
+    "descricao": "Testes rápidos de HIV, sífilis e hepatites virais, com aconselhamento, de forma sigilosa e gratuita.",
+    "requisitos": "Não é preciso agendar nem apresentar encaminhamento na maioria das unidades.",
+    "local": "UBS e Centros de Testagem e Aconselhamento (CTA).",
+    "contato": ""
+  },
+  {
+    "id": 9,
+    "titulo": "CVV – Apoio emocional",
+    "categoria": "Saúde Mental",
+    "descricao": "Apoio emocional e prevenção do suicídio, com conversa sigilosa e gratuita, por telefone, chat ou e-mail.",
+    "requisitos": "Nenhum requisito. Funciona 24h.",
+    "local": "Atendimento remoto em todo o Brasil.",
+    "contato": "Telefone: 188 | cvv.org.br"
+  },
+  {
+    "id": 10,
+    "titulo": "CAPS – Centro de Atenção Psicossocial",
+    "categoria": "Saúde Mental",
+    "descricao": "Cuidado em saúde mental pelo SUS para sofrimento psíquico intenso, inclusive decorrente de violência e discriminação.",
+    "requisitos": "Cartão SUS. Pode-se procurar diretamente ou ser encaminhado pela UBS.",
+    "local": "CAPS do seu município (consulte a UBS mais próxima).",
+    "contato": ""
+  },
+  {
+    "id": 11,
+    "titulo": "Centros de Cidadania LGBTI",
+    "categoria": "Acolhimento e Assistência Social",
+    "descricao": "Espaços de acolhimento com orientação jurídica, psicológica e social para pessoas LGBTQIA+ em vulnerabilidade ou vítimas de violência.",
+    "requisitos": "Atendimento voluntário. Leve documento com foto, se possível.",
+    "local": "Disponibilidade varia por cidade; consulte a assistência social municipal.",
+    "contato": ""
+  },
+  {
+    "id": 12,
+    "titulo": "CRAS – Assistência social",
+    "categoria": "Acolhimento e Assistência Social",
+    "descricao": "Porta de entrada para programas sociais, como CadÚnico e benefícios, para quem está em vulnerabilidade, sem discriminação.",
+    "requisitos": "Documento com foto e comprovante de residência, se houver.",
+    "local": "CRAS do seu bairro.",
+    "contato": ""
+  },
+  {
+    "id": 13,
+    "titulo": "Combate ao bullying LGBTfóbico na escola",
+    "categoria": "Educação e Trabalho",
+    "descricao": "Estudantes têm direito a ambiente escolar seguro e ao uso do nome social. Casos de discriminação devem ser denunciados.",
+    "requisitos": "Relate à direção ou à Secretaria de Educação; se não houver resposta, procure o Conselho Tutelar ou o Disque 100.",
+    "local": "Escola, Secretaria de Educação ou Conselho Tutelar.",
+    "contato": ""
+  },
+  {
+    "id": 14,
+    "titulo": "Discriminação no trabalho",
+    "categoria": "Educação e Trabalho",
+    "descricao": "Discriminação por orientação sexual ou identidade de gênero no trabalho pode ser denunciada ao Ministério Público do Trabalho.",
+    "requisitos": "Reúna provas (mensagens, e-mails, testemunhas) e dados da empresa.",
+    "local": "Ministério Público do Trabalho (denúncia online) ou sindicato.",
+    "contato": ""
+  }
+]

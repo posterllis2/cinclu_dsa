@@ -1,0 +1,740 @@
+[
+  {
+    "id": "CT01",
+    "area": "Lista encadeada",
+    "descricao": "Inserir 3 registros no fim de uma lista vazia",
+    "entrada": "inserir_fim(ID 1, 2, 3)",
+    "esperado": "3 | [1, 2, 3]",
+    "observado": "3 | [1, 2, 3]",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT02",
+    "area": "Lista encadeada",
+    "descricao": "Inserir no início",
+    "entrada": "lista [1, 2]; inserir_inicio(ID 9)",
+    "esperado": "[9, 1, 2] | cabeça=9 | cauda=2",
+    "observado": "[9, 1, 2] | cabeça=9 | cauda=2",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT03",
+    "area": "Lista encadeada",
+    "descricao": "Inserir em lista vazia",
+    "entrada": "lista vazia; inserir_fim(ID 5)",
+    "esperado": "1 | cabeça é cauda: True",
+    "observado": "1 | cabeça é cauda: True",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT04",
+    "area": "Lista encadeada",
+    "descricao": "Identificador duplicado",
+    "entrada": "lista [1, 2, 3]; inserir_fim(ID 2)",
+    "esperado": "IdDuplicadoError: Já existe um registro com o ID 2. | tamanho=3",
+    "observado": "IdDuplicadoError: Já existe um registro com o ID 2. | tamanho=3",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT05",
+    "area": "Lista encadeada",
+    "descricao": "Percurso em lista vazia",
+    "entrada": "lista vazia; percorrer",
+    "esperado": "[]",
+    "observado": "[]",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT06",
+    "area": "Lista encadeada",
+    "descricao": "Remover a cabeça",
+    "entrada": "lista [1, 2, 3]; remover(1)",
+    "esperado": "[2, 3] | cabeça=2 | cauda=3",
+    "observado": "[2, 3] | cabeça=2 | cauda=3",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT07",
+    "area": "Lista encadeada",
+    "descricao": "Remover do meio",
+    "entrada": "lista [1, 2, 3]; remover(2)",
+    "esperado": "[1, 3] | cabeça=1 | cauda=3",
+    "observado": "[1, 3] | cabeça=1 | cauda=3",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT08",
+    "area": "Lista encadeada",
+    "descricao": "Remover a cauda e inserir depois (integridade)",
+    "entrada": "lista [1, 2, 3]; remover(3); inserir_fim(7)",
+    "esperado": "[1, 2, 7] | cabeça=1 | cauda=7",
+    "observado": "[1, 2, 7] | cabeça=1 | cauda=7",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT09",
+    "area": "Lista encadeada",
+    "descricao": "Remover o único elemento",
+    "entrada": "lista [4]; remover(4)",
+    "esperado": "[] | vazia=True | cauda=None",
+    "observado": "[] | vazia=True | cauda=None",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT10",
+    "area": "Lista encadeada",
+    "descricao": "Remover ID inexistente",
+    "entrada": "lista [1, 2, 3]; remover(99)",
+    "esperado": "None | tamanho=3",
+    "observado": "None | tamanho=3",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT11",
+    "area": "Lista encadeada",
+    "descricao": "Remover com lista vazia",
+    "entrada": "lista vazia; remover(1)",
+    "esperado": "None | tamanho=0",
+    "observado": "None | tamanho=0",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT12",
+    "area": "Lista encadeada",
+    "descricao": "Consultar ID existente",
+    "entrada": "lista [1, 2, 3]; buscar_por_id(2)",
+    "esperado": "Título 2",
+    "observado": "Título 2",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT13",
+    "area": "Lista encadeada",
+    "descricao": "Consultar ID inexistente",
+    "entrada": "lista [1, 2, 3]; buscar_por_id(50)",
+    "esperado": "None",
+    "observado": "None",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT14",
+    "area": "Lista encadeada",
+    "descricao": "Consultar em lista vazia",
+    "entrada": "lista vazia; buscar_por_id(1)",
+    "esperado": "None",
+    "observado": "None",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT15",
+    "area": "Lista encadeada",
+    "descricao": "Atualizar registro existente",
+    "entrada": "atualizar(1, titulo='Novo', categoria='Saúde Mental')",
+    "esperado": "Novo | Saúde Mental | id=1",
+    "observado": "Novo | Saúde Mental | id=1",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT16",
+    "area": "Lista encadeada",
+    "descricao": "Atualização inválida preserva o registro",
+    "entrada": "atualizar(1, titulo='   ')",
+    "esperado": "ValueError: O campo 'titulo' é obrigatório. | título preservado: Título 1",
+    "observado": "ValueError: O campo 'titulo' é obrigatório. | título preservado: Título 1",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT17",
+    "area": "Lista encadeada",
+    "descricao": "Atualizar ID inexistente",
+    "entrada": "atualizar(77, titulo='X')",
+    "esperado": "None",
+    "observado": "None",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT18",
+    "area": "Lista encadeada",
+    "descricao": "Atualização não altera o ID",
+    "entrada": "atualizar(1, id=500, titulo='Y')",
+    "esperado": "id=1 | título=Y",
+    "observado": "id=1 | título=Y",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT19",
+    "area": "Validação do modelo",
+    "descricao": "ID negativo",
+    "entrada": "Registro(id=-3)",
+    "esperado": "ValueError: O identificador deve ser um número inteiro positivo.",
+    "observado": "ValueError: O identificador deve ser um número inteiro positivo.",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT20",
+    "area": "Validação do modelo",
+    "descricao": "ID zero",
+    "entrada": "Registro(id=0)",
+    "esperado": "ValueError: O identificador deve ser um número inteiro positivo.",
+    "observado": "ValueError: O identificador deve ser um número inteiro positivo.",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT21",
+    "area": "Validação do modelo",
+    "descricao": "ID não numérico",
+    "entrada": "Registro(id='abc')",
+    "esperado": "ValueError: O identificador deve ser um número inteiro positivo.",
+    "observado": "ValueError: O identificador deve ser um número inteiro positivo.",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT22",
+    "area": "Validação do modelo",
+    "descricao": "Categoria inexistente",
+    "entrada": "Registro(categoria='Esportes')",
+    "esperado": "ValueError: Categoria inexistente.",
+    "observado": "ValueError: Categoria inexistente.",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT23",
+    "area": "Validação do modelo",
+    "descricao": "Título acima do limite",
+    "entrada": "título com 81 caracteres",
+    "esperado": "ValueError: O campo 'titulo' excede 80 caracteres.",
+    "observado": "ValueError: O campo 'titulo' excede 80 caracteres.",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT24",
+    "area": "Validação do modelo",
+    "descricao": "Descrição só com espaços",
+    "entrada": "descricao='    '",
+    "esperado": "ValueError: O campo 'descricao' é obrigatório.",
+    "observado": "ValueError: O campo 'descricao' é obrigatório.",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT25",
+    "area": "Validação do modelo",
+    "descricao": "Registro válido com contato opcional vazio",
+    "entrada": "contato=''",
+    "esperado": "sem erro",
+    "observado": "sem erro",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT26",
+    "area": "Busca",
+    "descricao": "Categoria sem acento e em maiúsculas",
+    "entrada": "pesquisar categoria 'SAUDE' (dados de exemplo)",
+    "esperado": "5 resultado(s): [6, 7, 8, 9, 10]",
+    "observado": "5 resultado(s): [6, 7, 8, 9, 10]",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT27",
+    "area": "Busca",
+    "descricao": "Título parcial",
+    "entrada": "pesquisar título 'prep'",
+    "esperado": "1 resultado(s): [6]",
+    "observado": "1 resultado(s): [6]",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT28",
+    "area": "Busca",
+    "descricao": "Nenhum registro encontrado",
+    "entrada": "pesquisar título 'zzz'",
+    "esperado": "0 resultado(s): []",
+    "observado": "0 resultado(s): []",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT29",
+    "area": "Busca",
+    "descricao": "Termo vazio",
+    "entrada": "pesquisar título '   '",
+    "esperado": "0 resultado(s)",
+    "observado": "0 resultado(s)",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT30",
+    "area": "Busca",
+    "descricao": "Busca em lista vazia",
+    "entrada": "pesquisar título 'a' em lista vazia",
+    "esperado": "0 resultado(s)",
+    "observado": "0 resultado(s)",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT31",
+    "area": "Ordenação",
+    "descricao": "Merge Sort por titulo (crescente)",
+    "entrada": "ordenar(chave=titulo, algoritmo=merge, reverso=False) em lista embaralhada",
+    "esperado": "[10, 5, 11, 13, 12, 9, 14, 1, 6, 7, 2, 3, 8, 4]",
+    "observado": "[10, 5, 11, 13, 12, 9, 14, 1, 6, 7, 2, 3, 8, 4]",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT32",
+    "area": "Ordenação",
+    "descricao": "Insertion Sort por titulo (crescente)",
+    "entrada": "ordenar(chave=titulo, algoritmo=insertion, reverso=False) em lista embaralhada",
+    "esperado": "[10, 5, 11, 13, 12, 9, 14, 1, 6, 7, 2, 3, 8, 4]",
+    "observado": "[10, 5, 11, 13, 12, 9, 14, 1, 6, 7, 2, 3, 8, 4]",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT33",
+    "area": "Ordenação",
+    "descricao": "Merge Sort por categoria (decrescente)",
+    "entrada": "ordenar(chave=categoria, algoritmo=merge, reverso=True) em lista embaralhada",
+    "esperado": "[9, 10, 8, 7, 6, 14, 13, 4, 3, 5, 2, 1, 12, 11]",
+    "observado": "[9, 10, 8, 7, 6, 14, 13, 4, 3, 5, 2, 1, 12, 11]",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT34",
+    "area": "Ordenação",
+    "descricao": "Insertion Sort por id (decrescente)",
+    "entrada": "ordenar(chave=id, algoritmo=insertion, reverso=True) em lista embaralhada",
+    "esperado": "[14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1]",
+    "observado": "[14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1]",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT35",
+    "area": "Ordenação",
+    "descricao": "Merge Sort por id (crescente)",
+    "entrada": "ordenar(chave=id, algoritmo=merge, reverso=False) em lista embaralhada",
+    "esperado": "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]",
+    "observado": "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT36",
+    "area": "Ordenação",
+    "descricao": "Ordenar lista vazia",
+    "entrada": "lista vazia; ordenar (merge e insertion)",
+    "esperado": "[] | []",
+    "observado": "[] | []",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT37",
+    "area": "Ordenação",
+    "descricao": "Ordenar lista com um elemento",
+    "entrada": "lista [8]; ordenar",
+    "esperado": "[8] | cabeça=8 | cauda=8",
+    "observado": "[8] | cabeça=8 | cauda=8",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT38",
+    "area": "Ordenação",
+    "descricao": "Lista já ordenada permanece igual",
+    "entrada": "lista [1..5]; ordenar por id",
+    "esperado": "[1, 2, 3, 4, 5]",
+    "observado": "[1, 2, 3, 4, 5]",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT39",
+    "area": "Ordenação",
+    "descricao": "Estabilidade: chaves iguais mantêm a ordem",
+    "entrada": "lista embaralhada; chave = categoria (bruta); Merge e Insertion",
+    "esperado": "[12, 11, 2, 1, 4, 5, 3, 14, 13, 8, 7, 6, 10, 9] | [12, 11, 2, 1, 4, 5, 3, 14, 13, 8, 7, 6, 10, 9]",
+    "observado": "[12, 11, 2, 1, 4, 5, 3, 14, 13, 8, 7, 6, 10, 9] | [12, 11, 2, 1, 4, 5, 3, 14, 13, 8, 7, 6, 10, 9]",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT40",
+    "area": "Ordenação",
+    "descricao": "Integridade após ordenar (cauda e inserção)",
+    "entrada": "lista [3, 1, 2]; ordenar por id; inserir_fim(ID 10)",
+    "esperado": "[1, 2, 3, 10] | cabeça=1 | cauda=10",
+    "observado": "[1, 2, 3, 10] | cabeça=1 | cauda=10",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT41",
+    "area": "Ordenação",
+    "descricao": "Estabilidade na ordem decrescente",
+    "entrada": "lista embaralhada; chave = categoria (bruta); reverso=True; Merge e Insertion",
+    "esperado": "[10, 9, 8, 7, 6, 14, 13, 4, 5, 3, 2, 1, 12, 11] | [10, 9, 8, 7, 6, 14, 13, 4, 5, 3, 2, 1, 12, 11]",
+    "observado": "[10, 9, 8, 7, 6, 14, 13, 4, 5, 3, 2, 1, 12, 11] | [10, 9, 8, 7, 6, 14, 13, 4, 5, 3, 2, 1, 12, 11]",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT42",
+    "area": "Ordenação",
+    "descricao": "Insertion Sort em lista em ordem inversa",
+    "entrada": "lista [5, 4, 3, 2, 1]; ordenar por id crescente",
+    "esperado": "[1, 2, 3, 4, 5] | cabeça=1 | cauda=5",
+    "observado": "[1, 2, 3, 4, 5] | cabeça=1 | cauda=5",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT43",
+    "area": "Ordenação",
+    "descricao": "Algoritmo desconhecido",
+    "entrada": "ordenar(algoritmo='bubble')",
+    "esperado": "ValueError: Algoritmo de ordenação desconhecido.",
+    "observado": "ValueError: Algoritmo de ordenação desconhecido.",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT44",
+    "area": "Lista encadeada",
+    "descricao": "Representação da cadeia de nós",
+    "entrada": "lista [3, 1, 2]; diagrama()",
+    "esperado": "cabeça → [3] → [1] → [2] → None   |   cauda = [2]   |   tamanho = 3",
+    "observado": "cabeça → [3] → [1] → [2] → None   |   cauda = [2]   |   tamanho = 3",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT45",
+    "area": "Lista encadeada",
+    "descricao": "Representação de lista vazia",
+    "entrada": "lista vazia; diagrama()",
+    "esperado": "cabeça → None   (lista vazia)",
+    "observado": "cabeça → None   (lista vazia)",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT46",
+    "area": "Análise",
+    "descricao": "Contagem por categoria (dados de exemplo)",
+    "entrada": "resumo(lista de exemplo)",
+    "esperado": "total=14 | [3, 2, 3, 2, 2, 2] | predominante=Saúde",
+    "observado": "total=14 | [3, 2, 3, 2, 2, 2] | predominante=Saúde",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT47",
+    "area": "Análise",
+    "descricao": "Análise de lista vazia",
+    "entrada": "formatar_resumo(lista vazia)",
+    "esperado": "Nenhum registro cadastrado ainda.",
+    "observado": "Nenhum registro cadastrado ainda.",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT48",
+    "area": "Análise",
+    "descricao": "Análise reflete exclusão",
+    "entrada": "excluir ID 6 (Saúde) e reanalisar",
+    "esperado": "total=13 | Saúde=2",
+    "observado": "total=13 | Saúde=2",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT49",
+    "area": "Persistência",
+    "descricao": "Salvar e carregar (ida e volta)",
+    "entrada": "salvar 14 registros ordenados por título e carregar",
+    "esperado": "14 registros | ordem preservada: True",
+    "observado": "14 registros | ordem preservada: True",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT50",
+    "area": "Persistência",
+    "descricao": "Arquivo inexistente",
+    "entrada": "carregar('nao_existe.json')",
+    "esperado": "None",
+    "observado": "None",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT51",
+    "area": "Persistência",
+    "descricao": "JSON corrompido",
+    "entrada": "arquivo com '{ isto nao e json'",
+    "esperado": "ErroPersistencia: Arquivo de dados inválido",
+    "observado": "ErroPersistencia: Arquivo de dados inválido",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT52",
+    "area": "Persistência",
+    "descricao": "IDs duplicados no arquivo",
+    "entrada": "arquivo com dois registros de ID 1",
+    "esperado": "ErroPersistencia: Arquivo de dados inválido",
+    "observado": "ErroPersistencia: Arquivo de dados inválido",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT53",
+    "area": "Persistência",
+    "descricao": "Registro inválido no arquivo",
+    "entrada": "arquivo com categoria inexistente",
+    "esperado": "ErroPersistencia: Arquivo de dados inválido",
+    "observado": "ErroPersistencia: Arquivo de dados inválido",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT54",
+    "area": "Menu (terminal)",
+    "descricao": "Opção inexistente e não numérica",
+    "entrada": "digitar '9', 'abc' e depois '8'",
+    "esperado": "⚠ Opção inexistente. Escolha de 1 a 8. / ⚠ Opção inexistente. Escolha de 1 a 8.",
+    "observado": "⚠ Opção inexistente. Escolha de 1 a 8. / ⚠ Opção inexistente. Escolha de 1 a 8.",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT55",
+    "area": "Menu (terminal)",
+    "descricao": "Cadastro: ID duplicado, ID inválido e sucesso",
+    "entrada": "opção 1; ID '1' (duplicado); ID 'abc'; ID '100'; campos válidos",
+    "esperado": "⚠ O ID 1 já existe. Escolha outro. / ⚠ Digite um número inteiro positivo. / ✔ Registro 100 cadastrado.",
+    "observado": "⚠ O ID 1 já existe. Escolha outro. / ⚠ Digite um número inteiro positivo. / ✔ Registro 100 cadastrado.",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT56",
+    "area": "Menu (terminal)",
+    "descricao": "Cadastro: campo vazio e categoria inválida",
+    "entrada": "opção 1; ID (Enter); título vazio; categoria '9'; depois valores válidos",
+    "esperado": "⚠ Campo obrigatório. / ⚠ Opção inválida. Escolha de 1 a 6. / ✔ Registro 15 cadastrado.",
+    "observado": "⚠ Campo obrigatório. / ⚠ Opção inválida. Escolha de 1 a 6. / ✔ Registro 15 cadastrado.",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT57",
+    "area": "Menu (terminal)",
+    "descricao": "Persistência após cadastrar",
+    "entrada": "cadastrar ID 15 e reler o arquivo JSON",
+    "esperado": "15 registros | ID 15 presente: True",
+    "observado": "15 registros | ID 15 presente: True",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT58",
+    "area": "Menu (terminal)",
+    "descricao": "Consulta: ID inexistente",
+    "entrada": "opção 2; ID 999",
+    "esperado": "ℹ Nenhum registro com esse ID.",
+    "observado": "ℹ Nenhum registro com esse ID.",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT59",
+    "area": "Menu (terminal)",
+    "descricao": "Consulta: IDs inválidos (-5, 0, texto) e depois válido",
+    "entrada": "opção 2; '-5', '0', 'x', '3'",
+    "esperado": "⚠ Digite um número inteiro positivo. / ⚠ Digite um número inteiro positivo. / ⚠ Digite um número inteiro positivo.",
+    "observado": "⚠ Digite um número inteiro positivo. / ⚠ Digite um número inteiro positivo. / ⚠ Digite um número inteiro positivo.",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT60",
+    "area": "Menu (terminal)",
+    "descricao": "Atualização mantendo valores (Enter)",
+    "entrada": "opção 3; ID 1; Enter em todos os campos",
+    "esperado": "✔ Registro atualizado.",
+    "observado": "✔ Registro atualizado.",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT61",
+    "area": "Menu (terminal)",
+    "descricao": "Atualização: ID inexistente",
+    "entrada": "opção 3; ID 888",
+    "esperado": "ℹ Nenhum registro com esse ID.",
+    "observado": "ℹ Nenhum registro com esse ID.",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT62",
+    "area": "Menu (terminal)",
+    "descricao": "Exclusão: cancelar e depois confirmar",
+    "entrada": "opção 4; ID 1; 'n'; opção 4; ID 1; 's'",
+    "esperado": "Exclusão cancelada. / ✔ Registro excluído.",
+    "observado": "Exclusão cancelada. / ✔ Registro excluído.",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT63",
+    "area": "Menu (terminal)",
+    "descricao": "Exclusão: ID inexistente",
+    "entrada": "opção 4; ID 777",
+    "esperado": "ℹ Nenhum registro com esse ID.",
+    "observado": "ℹ Nenhum registro com esse ID.",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT64",
+    "area": "Menu (terminal)",
+    "descricao": "Pesquisa sem resultado",
+    "entrada": "opção 5; título; 'zzz'",
+    "esperado": "ℹ Nenhum registro encontrado para 'zzz' em titulo.",
+    "observado": "ℹ Nenhum registro encontrado para 'zzz' em titulo.",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT65",
+    "area": "Menu (terminal)",
+    "descricao": "Operações com a lista vazia",
+    "entrada": "lista vazia; opções 2, 3, 4, 5, 6 e 7",
+    "esperado": "ℹ A lista está vazia. / ℹ A lista está vazia. / ℹ A lista está vazia. / ℹ A lista está vazia. / ℹ A lista está vazia. / Nenhum registro cadastrado ainda.",
+    "observado": "ℹ A lista está vazia. / ℹ A lista está vazia. / ℹ A lista está vazia. / ℹ A lista está vazia. / ℹ A lista está vazia. / Nenhum registro cadastrado ainda.",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT66",
+    "area": "Menu (terminal)",
+    "descricao": "Arquivo de dados corrompido na inicialização",
+    "entrada": "servicos.json com texto inválido; abrir e encerrar",
+    "esperado": "aviso exibido: True | cópia .corrompido criada: True | 14 registros recriados",
+    "observado": "aviso exibido: True | cópia .corrompido criada: True | 14 registros recriados",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT67",
+    "area": "Menu (terminal)",
+    "descricao": "Interrupção (EOF / Ctrl+D)",
+    "entrada": "entrada encerrada sem digitar '8'",
+    "esperado": "Encerrando. Até logo! 🌈",
+    "observado": "Encerrando. Até logo! 🌈",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT68",
+    "area": "Interface gráfica",
+    "descricao": "Cadastro válido",
+    "entrada": "ID sugerido (15) + campos válidos; Cadastrar",
+    "esperado": "✔ Registro 15 cadastrado. | 15 linhas",
+    "observado": "✔ Registro 15 cadastrado. | 15 linhas",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT69",
+    "area": "Interface gráfica",
+    "descricao": "Cadastro com ID duplicado",
+    "entrada": "ID 3 já existente; Cadastrar",
+    "esperado": "⚠ Já existe um registro com o ID 3. | 14 linhas",
+    "observado": "⚠ Já existe um registro com o ID 3. | 14 linhas",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT70",
+    "area": "Interface gráfica",
+    "descricao": "Cadastro com ID não numérico",
+    "entrada": "ID 'abc'; Cadastrar",
+    "esperado": "⚠ O ID deve ser um número inteiro positivo.",
+    "observado": "⚠ O ID deve ser um número inteiro positivo.",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT71",
+    "area": "Interface gráfica",
+    "descricao": "Cadastro com título vazio",
+    "entrada": "título vazio; Cadastrar",
+    "esperado": "⚠ O campo 'titulo' é obrigatório. Nada foi alterado.",
+    "observado": "⚠ O campo 'titulo' é obrigatório. Nada foi alterado.",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT72",
+    "area": "Interface gráfica",
+    "descricao": "Consulta por ID existente",
+    "entrada": "Consultar ID 6",
+    "esperado": "Registro 6 encontrado (busca sequencial por ID). | 1 linha(s)",
+    "observado": "Registro 6 encontrado (busca sequencial por ID). | 1 linha(s)",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT73",
+    "area": "Interface gráfica",
+    "descricao": "Consulta por ID inexistente",
+    "entrada": "Consultar ID 999",
+    "esperado": "ℹ Nenhum registro com o ID 999. | 0 linha(s)",
+    "observado": "ℹ Nenhum registro com o ID 999. | 0 linha(s)",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT74",
+    "area": "Interface gráfica",
+    "descricao": "Consulta por ID inválido",
+    "entrada": "Consultar ID 'abc'",
+    "esperado": "⚠ Digite um ID numérico positivo para consultar.",
+    "observado": "⚠ Digite um ID numérico positivo para consultar.",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT75",
+    "area": "Interface gráfica",
+    "descricao": "Pesquisa por categoria",
+    "entrada": "categoria; 'saude mental'",
+    "esperado": "2 resultado(s) para 'saude mental' em categoria. | 2 linha(s)",
+    "observado": "2 resultado(s) para 'saude mental' em categoria. | 2 linha(s)",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT76",
+    "area": "Interface gráfica",
+    "descricao": "Pesquisa sem resultado",
+    "entrada": "título; 'zzz'",
+    "esperado": "ℹ Nenhum registro encontrado para 'zzz' em titulo. | 0 linha(s)",
+    "observado": "ℹ Nenhum registro encontrado para 'zzz' em titulo. | 0 linha(s)",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT77",
+    "area": "Interface gráfica",
+    "descricao": "Atualização de registro selecionado",
+    "entrada": "selecionar ID 1; alterar título; Atualizar",
+    "esperado": "✔ Registro 1 atualizado. | Disque 100 (atualizado)",
+    "observado": "✔ Registro 1 atualizado. | Disque 100 (atualizado)",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT78",
+    "area": "Interface gráfica",
+    "descricao": "Exclusão de registro selecionado",
+    "entrada": "selecionar ID 5; Excluir (confirmar)",
+    "esperado": "✔ Registro 5 excluído. Restam 13. | 13 linhas",
+    "observado": "✔ Registro 5 excluído. Restam 13. | 13 linhas",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT79",
+    "area": "Interface gráfica",
+    "descricao": "Exclusão sem seleção",
+    "entrada": "Excluir sem selecionar linha",
+    "esperado": "⚠ Selecione um registro na tabela para excluir.",
+    "observado": "⚠ Selecione um registro na tabela para excluir.",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT80",
+    "area": "Interface gráfica",
+    "descricao": "Ordenação decrescente por ID (Insertion Sort)",
+    "entrada": "id; Insertion Sort; decrescente",
+    "esperado": "primeira linha: 14 | última linha: 1",
+    "observado": "primeira linha: 14 | última linha: 1",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT81",
+    "area": "Interface gráfica",
+    "descricao": "Análise por categoria",
+    "entrada": "botão Análise",
+    "esperado": "Análise: categoria predominante = Saúde.",
+    "observado": "Análise: categoria predominante = Saúde.",
+    "status": "PASSOU"
+  },
+  {
+    "id": "CT82",
+    "area": "Interface gráfica",
+    "descricao": "Operações com lista vazia",
+    "entrada": "lista vazia; pesquisar, ordenar e excluir",
+    "esperado": "ℹ A lista está vazia. / ℹ A lista está vazia: nada a ordenar. / ⚠ A lista está vazia: não há o que excluir.",
+    "observado": "ℹ A lista está vazia. / ℹ A lista está vazia: nada a ordenar. / ⚠ A lista está vazia: não há o que excluir.",
+    "status": "PASSOU"
+  }
+]
