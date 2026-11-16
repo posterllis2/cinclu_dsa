@@ -5,6 +5,8 @@ população LGBTQIA+: saúde, direitos e documentação, denúncia e proteção,
 
 **Autores:** Enzo Posterlli Strinta (RM 570035) · Giovanna Tristão Lopes (RM 572552)· Leonardo Robert Maulicino (RM 570329)
 
+**LEIA O ARQUIVO "documentação.pdf" antes de executar o Cinclu**
+
 ## Requisitos
 - Python 3.8 ou superior. Apenas biblioteca padrão (sem `pip install`).
 - Tkinter para a interface gráfica (já vem no Python do Windows/macOS; no Linux: `sudo apt install python3-tk`).
