@@ -35,5 +35,3 @@ python testes/evidencias.py                # tabela entrada / esperado / observa
 | `dados_iniciais.py` | Registros de exemplo (revisar antes de divulgar) |
 | `cli.py` / `gui.py` / `main.py` | Menu em terminal, interface gráfica e ponto de entrada |
 | `testes/` | Casos de teste e gerador de evidências |
-
-> Os registros de exemplo são ilustrativos: confira telefones, endereços e normas antes de qualquer uso real.
