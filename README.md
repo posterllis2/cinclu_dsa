@@ -1,5 +1,7 @@
 # Cinclu · Cidade Inclusiva
 
+Link do vídeo de demonstração: https://youtu.be/n782r7e8I1w
+
 Protótipo do **Citizen Assist AI** (Global Solution 2026.2 · Data Structures and Algorithms) com foco em apoio à
 população LGBTQIA+: saúde, direitos e documentação, denúncia e proteção, acolhimento e educação/trabalho.
 
